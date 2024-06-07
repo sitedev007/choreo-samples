@@ -34,7 +34,7 @@ COPY . .
 ENV CGO_ENABLED=0 GOOS=linux GOARCH=amd64
 
 # Run unit tests
-#RUN go test -v ./...
+RUN go test -v ./...
 
 RUN go get github.com/gofiber/fiber/v2 && go get github.com/gofiber/swagger && 	go get github.com/google/uuid && go get github.com/sirupsen/logrus
 # Build the binary
